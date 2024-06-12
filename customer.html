@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <title>Product Listing</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <input type="checkbox" id="check" />
+        <label for="check" class="checkbtn">
+          <i class="fas fa-bars"></i>
+        </label>
+        <label class="logo"
+          ><img src="assets/icons8-car-96.png" alt="logo"
+        /></label>
+
+        <ul>
+          <li><a class="active" href="#">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="wishlist.html">Wishlist</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Contact</a></li>
+          <li>
+            <a href="cart.html"
+              ><i class="fa-solid fa-cart-shopping" id="card"></i
+            ></a>
+          </li>
+          <li>
+            <a href=""><i class="fa-solid fa-user"></i></a>
+          </li>
+        </ul>
+      </nav>
+      <!-- <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <a href="#">MyStore</a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="cart.html">Cart</a></li>
+                </ul>
+            </nav>
+        </div> -->
+    </header>
+
+    <div id="products"></div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        fetchProducts();
+      });
+
+      function fetchProducts() {
+        fetch(`http://localhost:3000/products`)
+          .then((response) => response.json())
+          .then((products) => {
+            console.log(products);
+            const productTable = document.getElementById("products");
+            productTable.innerHTML = ""; // Clear the table
+            addProductToPage(products);
+          })
+          .catch((error) => {
+            console.error("Error fetching products:", error);
+          });
+      }
+
+      function addProductToPage(products) {
+        let cart = localStorage.getItem("cart")
+          ? JSON.parse(localStorage.getItem("cart"))
+          : [];
+        var object = "";
+        for (let i = 0; i < products.length; i++) {
+          object += `<div id="${products[i].id}" class="product">
+                        <button onclick="heart('${products[i].id}',this)"> <i class="fa-solid fa-heart"></i></button>
+                        <h1>${products[i].Name}</h1>
+                        <img src="${products[i].Image}" alt="${products[i].Name}">
+                        <p class="price">${products[i].Category} $</p>
+                        <p class="price">${products[i].Price} $</p>
+                        <p class="description">${products[i].Description}</p>
+                        <p class="category">Quantity: ${products[i].Quantity}</p>
+                        <button class="add-to-cart" onclick="addToCart('${products[i].id}',this)">Add to Cart</button>
+                    </div>`;
+        }
+        document.getElementById("products").innerHTML = object;
+        viewProduct();
+      }
+
+      function viewProduct() {
+        let product = document.querySelectorAll(".product");
+        let cart = localStorage.getItem("cart")
+          ? JSON.parse(localStorage.getItem("cart"))
+          : [];
+
+        fetch(`http://localhost:3000/products`)
+          .then((response) => {
+            return response.json();
+          })
+          .then((products) => {
+            for (let e of products) {
+              console.log(e.id );
+            }
+          });
+
+        cart.forEach((element) => {});
+        console.log(product);
+        console.log(cart);
+      }
+      let cart = [];
+
+      //   function addToCart(id) {
+      //        alert("Product added to cart");
+      //      cart.push(id);
+      //       console.log("Product added to cart. Cart content:", cart);
+      //       localStorage.setItem('cart', JSON.stringify(cart)); // Store cart in localStorage
+      //   }
+
+      function addToCart(id, btn) {
+        //cart
+        cart = localStorage.getItem("cart")
+          ? JSON.parse(localStorage.getItem("cart"))
+          : [];
+        //cart btn
+        // cartBtn = localStorage.getItem("cart-btn")
+        //   ? JSON.parse(localStorage.getItem("cart-btn"))
+        //   : [];
+        // cartBtn.push(btn.id);
+        // console.log(cartBtn);
+        // localStorage.setItem("cart-btn", JSON.stringify(cartBtn));
+        // // console.log(btn);
+        // ############
+        cart.push(id);
+        localStorage.setItem("cart", JSON.stringify(cart));
+        let items = JSON.parse(localStorage.getItem("cart"));
+        document.getElementById("card").textContent = items.length;
+        btn.setAttribute("disabled", "disabled");
+        btn.classList.add("disabled");
+      }
+      //hidden Btn
+
+      let heartsARR = [];
+      function heart(id, ptn) {
+        if (ptn) {
+          ptn.style.color = "red";
+          localStorage.setItem("heartsARR", JSON.stringify(heartsARR));
+          heartsARR = localStorage.getItem("heartsARR")
+            ? JSON.parse(localStorage.getItem("heartsARR"))
+            : [];
+          heartsARR.push(id);
+          let items = JSON.parse(localStorage.getItem("heartsARR"));
+        }
+      }
+    </script>
+  </body>
+</html>

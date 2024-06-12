@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>register</title>
+  </head>
+  <body>
+    <div class="form">
+      <input id="first-name" type="text" placeholder="first name" />
+      <input id="last-name" type="text" placeholder="last name" />
+      <input id="user-name" type="text" placeholder="user name" />
+      <select id="gender" name="" id="">
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+      </select>
+      <input id="email" type="text" placeholder="email" />
+      <input id="password" type="text" placeholder="password" />
+      <input id="re-password" type="text" placeholder="confirm pass" />
+      <button id="register">register</button>
+      <p id="message" class=""></p>
+    </div>
+    <style>
+      .f-message {
+        box-shadow: 1px 1px 2px gray;
+        width: 80%;
+        height: 20px;
+        background-color: rgb(255, 161, 161, 8);
+        color: red;
+        font-weight: bold;
+        font-size: 0.6rem;
+        border: 1px solid rgb(248, 248, 248);
+        border-radius: 2px;
+        position: absolute;
+        top: -25px;
+        text-align: center;
+        align-content: center;
+      }
+      .v-message {
+        box-shadow: 1px 1px 2px gray;
+        width: 80%;
+        height: 20px;
+        background-color: rgb(255, 161, 161, 0.8);
+        color: red;
+        font-weight: bold;
+        font-size: 0.6rem;
+        border: 1px solid rgb(248, 248, 248);
+        border-radius: 2px;
+        position: absolute;
+        top: -25px;
+        text-align: center;
+        align-content: center;
+      }
+      .form {
+        border-radius: 5px;
+        padding: 10px;
+        border: 1px solid black;
+        margin: 30px auto;
+        width: 50%;
+        display: flex;
+        row-gap: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+        background-color: rgba(164, 170, 170, 0.4);
+        position: relative;
+      }
+      .form input {
+        background-color: rgb(241, 241, 241);
+        outline: none;
+        border: none;
+        border-bottom: 1px solid black;
+        width: 100%;
+        padding: 10px;
+        margin: 5px;
+        text-align: center;
+      }
+      .form button {
+        width: 50%;
+        height: 40px;
+      }
+    </style>
+    <script src="register.js"></script>
+  </body>
+</html>

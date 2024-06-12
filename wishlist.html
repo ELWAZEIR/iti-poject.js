@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+    <link rel="stylesheet" href="styles/cart.css">
+    <title>Cart</title>
+   
+</head>
+<body>
+            <li><a href="index.html">Products</a></li>
+    <div id="wishlist"></div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            displayhearts();
+        });
+
+        function displayhearts() {
+            let harts = localStorage.getItem('heartsARR');
+            console.log(harts);
+            if (!harts) {
+                harts = [];
+            } else {
+                harts = JSON.parse(harts);
+            }
+
+            const wishlist = document.getElementById('wishlist');
+            wishlist.innerHTML = ''; 
+            fetch(`http://localhost:3000/products`)
+                .then(response => response.json())
+                .then(products => {
+                    let cartHtml = '';
+                    harts.forEach(cartItemId => {
+                        const product = products.find(prod => prod.id === cartItemId);
+                        if (product) {
+                            cartHtml +=
+                                `<div class="product">
+                                    <h1>${product.Name}</h1>
+                                    <img src="${product.Image}" alt="${product.Name}">
+                                    <p class="price">${product.Category} $</p>
+                                    <p class="price">${product.Price} $</p>
+                                    <p class="description">${product.Description}</p>
+                                </div>`;
+                        }
+                    });
+                    
+                    wishlist.innerHTML = cartHtml;
+                })
+                .catch(error => {
+                    console.error('Error fetching products:', error);
+                });
+                
+        }
+       
+    </script>
+</body>
+</html>

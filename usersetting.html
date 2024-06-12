@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      div {
+        border: 1px solid black;
+        width: 300px;
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        row-gap: 5px;
+        margin: 10px auto;
+        background-color: rgb(173, 173, 173);
+      }
+      input {
+        width: 100%;
+        padding: 5px;
+        text-align: center;
+      }
+      button {
+        width: 50%;
+        padding: 10px;
+        background-color: rgb(0, 0, 97);
+        color: white;
+        outline: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+    </style>
+    <div>
+      <p>Setting</p>
+      <input id="email" type="text" placeholder="email" />
+      <input id="password" type="text" placeholder="password" />
+      <input id="user-name" type="text" placeholder="user name" />
+      <input id="gender" type="text" placeholder="gender" />
+      <button id="save">Save</button>
+      <button id="get">get data</button>
+      <!-- script -->
+      <script>
+        // declare variables
+        let email = document.getElementById("email");
+        let password = document.getElementById("password");
+        let username = document.getElementById("user-name");
+        let gender = document.getElementById("gender");
+        let getBtn = document.getElementById("get");
+        let saveBtn = document.getElementById("save");
+        let activeUser = localStorage.getItem("active-user")
+          ? JSON.parse(localStorage.getItem("active-user"))
+          : "";
+        //get data
+        getBtn.addEventListener("click", () => {
+          if (localStorage.getItem("active-user")) {
+            email.value = activeUser.email;
+            password.value = activeUser.password;
+            username.value = activeUser.username;
+            gender.value = activeUser.gender;
+          } else {
+            document.write(`<center> anta ezay hena </center>`);
+          }
+        });
+
+        function checkEmail(db, email) {
+          var out = db.find((e) => {
+            return e.email == email;
+          });
+          if(boolean(out)){
+            
+          }
+        }
+        // update data
+        saveBtn.addEventListener("click", () => {
+          let update = activeUser;
+          update.email = email.value;
+          update.password = password.value;
+          update.username = username.value;
+          update.gender = gender.value;
+          //send request with update
+          let req = new XMLHttpRequest();
+          req.open("PUT", `http://localhost:3000/users/${activeUser.id}`);
+          req.send(JSON.stringify(update));
+          localStorage.setItem("active-user", JSON.stringify(update));
+        });
+        // req.onreadystatechange = () => {
+        // if (req.readyState == 4 && req.status == 200) {
+        //   console.log(req.response);
+        // }
+        //   };
+      </script>
+    </div>
+  </body>
+</html>

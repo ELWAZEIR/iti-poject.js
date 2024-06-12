@@ -1,0 +1,514 @@
+{
+  "users": [
+    {
+      "id": "4ed4",
+      "firstname": "mohamed",
+      "lastname": "yassin",
+      "username": "mohamed yassin",
+      "gender": "male",
+      "email": "mohamed@gamil.com",
+      "password": "mohamed123",
+      "orders": []
+    },
+    {
+      "id": "cf44",
+      "firstname": "hosni",
+      "lastname": "mohamed",
+      "username": "hosni",
+      "gender": "male",
+      "email": "hosni@gmail.com",
+      "password": "123456",
+      "orders": []
+    },
+    {
+      "id": "b0be",
+      "firstname": "hossam",
+      "lastname": "hassan",
+      "username": "hossam hasssn",
+      "gender": "male",
+      "email": "hossam@gamil.com",
+      "password": "hos123",
+      "orders": []
+    }
+  ],
+  "products": [
+    {
+      "id": "b7a4",
+      "Name": "Engine Oil Filter",
+      "Image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtPZhaouoO01n_XVpet2LOixJsw_brfVYkCg&s",
+      "Category": "Filters",
+      "Price": 9.99,
+      "Description": "High-performance engine oil filter for optimal filtration and engine protection.",
+      "Stock": true,
+      "Quantity": 100
+    },
+    {
+      "id": "fb78",
+      "Name": "Brake Pads",
+      "Image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStLECbVQ-3_w7pwbQuwo2hA23wZMqEJVGW7g&s",
+      "Category": "Brakes",
+      "Price": 39.95,
+      "Description": "Premium ceramic brake pads for smooth braking and reduced noise.",
+      "Stock": true,
+      "Quantity": 50
+    },
+    {
+      "id": "1a12",
+      "Name": "Air Filter",
+      "Image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkpaBd1BHqwJUDoMRXD4DpjhUrtO-2F9Pogg&s",
+      "Category": "Filters",
+      "Price": 19.99,
+      "Description": "High-flow air filter designed for increased engine performance and efficiency.",
+      "Stock": true,
+      "Quantity": 75
+    },
+    {
+      "id": "d5ff",
+      "Name": "Spark Plugs",
+      "Image": "https://m.media-amazon.com/images/I/91vr2G7nM2L.jpg",
+      "Category": "Ignition",
+      "Price": 7.5,
+      "Description": "Premium spark plugs for improved ignition and fuel efficiency.",
+      "Stock": true,
+      "Quantity": 200
+    },
+    {
+      "Name": "Transmission Fluid",
+      "Image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQT17RrFDRs3pfpw0zAZPTEEX0KbtBqKFWyQ&s",
+      "Category": "Fluids",
+      "Price": 12.99,
+      "Description": "Synthetic transmission fluid for smooth gear shifting and extended component life.",
+      "Stock": true,
+      "Quantity": 80,
+      "id": "c18b"
+    },
+    {
+      "Name": "Wiper Blades",
+      "Image": "https://m.media-amazon.com/images/I/71cTysOgcaL._AC_UF894,1000_QL80_.jpg",
+      "Category": "Exterior",
+      "Price": 24.95,
+      "Description": "All-season wiper blades for clear visibility in all weather conditions.",
+      "Stock": true,
+      "Quantity": 60,
+      "id": "f7f1"
+    },
+    {
+      "Name": "Shock Absorbers",
+      "Image": "https://images-cdn.ubuy.com.sa/634d067d351a7649ad30eb72-motorcycle-shock-absorber-pair-shock.jpg",
+      "Category": "Suspension",
+      "Price": 89.99,
+      "Description": "Gas-charged shock absorbers for smooth and controlled ride comfort.",
+      "Stock": true,
+      "Quantity": 40,
+      "id": "c24c"
+    },
+    {
+      "Name": "Battery",
+      "Image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGufh9JpVpLUuVIkap0gFYdWi3ZtkNlJevdw&s",
+      "Category": "Electrical",
+      "Price": 129.95,
+      "Description": "High-performance car battery with long life and reliable starting power.",
+      "Stock": true,
+      "Quantity": 30,
+      "id": "3baa"
+    },
+    {
+      "Name": "Brake Rotors",
+      "Image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtYb42kcvLu3WwLCmLGzUA0mCguQ3oUiS8ag&s",
+      "Category": "Brakes",
+      "Price": 59.99,
+      "Description": "Durable brake rotors for consistent braking performance and heat dissipation.",
+      "Stock": true,
+      "Quantity": 55,
+      "id": "2434"
+    },
+    {
+      "Name": "Radiator",
+      "Image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQL8ugiFEigXo4c9rAnWVehFoFCvWxlqTS1mQ&s",
+      "Category": "Cooling",
+      "Price": 149.95,
+      "Description": "High-efficiency radiator for optimal engine cooling and temperature control.",
+      "Stock": true,
+      "Quantity": 25,
+      "id": "9f63"
+    },
+    {
+      "Name": "Fuel Pump",
+      "Image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMVUdZ5EVf-LiieSq8KYmIL9TEDKBHwI8wIg&s",
+      "Category": "Fuel System",
+      "Price": 79.95,
+      "Description": "Electric fuel pump for reliable fuel delivery and performance.",
+      "Stock": true,
+      "Quantity": 35,
+      "id": "bf12"
+    },
+    {
+      "Name": "Tires",
+      "Image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8Z8tDnm3_zuG-b9KaxiBEu7LY0GJi9SE1ow&s",
+      "Category": "Wheels & Tires",
+      "Price": 149.95,
+      "Description": "High-performance tires for superior traction and handling.",
+      "Stock": true,
+      "Quantity": 70,
+      "id": "11b7"
+    },
+    {
+      "Name": "Cabin Air Filter",
+      "Image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6WNIP8sCNAL674SUlJVrdlLGoj3KFDme4Ww&s",
+      "Category": "Filters",
+      "Price": 29.99,
+      "Description": "Premium cabin air filter for clean and fresh interior air.",
+      "Stock": true,
+      "Quantity": 45,
+      "id": "2be2"
+    },
+    {
+      "Name": "Alternator",
+      "Image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMDobIp78ezzIoxb6aeaHBVp0zp4xt1ieCRg&s",
+      "Category": "Electrical",
+      "Price": 179.95,
+      "Description": "High-output alternator for reliable electrical power generation.",
+      "Stock": true,
+      "Quantity": 20,
+      "id": "896d"
+    },
+    {
+      "Name": "Oxygen Sensor",
+      "Image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT__scXaRjx0BZmxzTLJUzSlCUC7hsh4Xk4rg&s",
+      "Category": "Exhaust System",
+      "Price": 49.95,
+      "Description": "Precision oxygen sensor for accurate exhaust gas analysis.",
+      "Stock": true,
+      "Quantity": 65,
+      "id": "460f"
+    },
+    {
+      "Name": "Wheel Bearings",
+      "Image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSatPei__xRh-TQOpUc0EVgIJaVBOaOJVYMKA&s",
+      "Category": "Wheels & Tires",
+      "Price": 39.95,
+      "Description": "Durable wheel bearings for smooth wheel rotation and reduced friction.",
+      "Stock": true,
+      "Quantity": 40,
+      "id": "9f40"
+    },
+    {
+      "Name": "Timing Belt",
+      "Image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDdIhIsVtaRR-TnHfSPzVNHhqSULD9Cjzd5w&s",
+      "Category": "Engine",
+      "Price": 69.99,
+      "Description": "High-strength timing belt for reliable engine timing and performance.",
+      "Stock": true,
+      "Quantity": 30,
+      "id": "fa95"
+    },
+    {
+      "Name": "Steering Rack",
+      "Image": "https://m.media-amazon.com/images/I/510lQe4jyTL._AC_SL1500_.jpg",
+      "Category": "Steering",
+      "Price": 249.95,
+      "Description": "Precision-engineered steering rack for responsive and accurate steering control.",
+      "Stock": true,
+      "Quantity": 15,
+      "id": "706b"
+    },
+    {
+      "Name": "Headlights",
+      "Image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeRIMuco_W4oTbEukaAVI6oG2lZ_Xp5TwhCw&s",
+      "Category": "Lighting",
+      "Price": 199.95,
+      "Description": "High-performance headlights for superior visibility and safety.",
+      "Stock": true,
+      "Quantity": 25,
+      "id": "dad0"
+    },
+    {
+      "Name": "Exhaust Muffler",
+      "Image": "https://m.media-amazon.com/images/I/51RnS3d+Y8L.jpg",
+      "Category": "Exhaust System",
+      "Price": 129.95,
+      "Description": "Premium exhaust muffler for enhanced exhaust gas flow and noise reduction.",
+      "Stock": true,
+      "Quantity": 20,
+      "id": "316e"
+    },
+    {
+      "Name": "Fuel Injector",
+      "Image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCZ4lAIEP1plPYUKAtI9B_qwT2FpnDjMLjTQ&s",
+      "Category": "Fuel System",
+      "Price": 49.95,
+      "Description": "Precision fuel injector for efficient fuel delivery and engine performance.",
+      "Stock": true,
+      "Quantity": 40,
+      "id": "a835"
+    },
+    {
+      "Name": "Starter Motor",
+      "Image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRptSmqnqZ3vRVWiztq8gr_URVfU60jnrZheA&s",
+      "Category": "Electrical",
+      "Price": 129.95,
+      "Description": "Reliable starter motor for quick and smooth engine starts.",
+      "Stock": true,
+      "Quantity": 30,
+      "id": "672b"
+    },
+    {
+      "Name": "Thermostat",
+      "Image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpOjP344CuAV7L8exT6Pv6ChBMMrBqsoZyVA&s",
+      "Category": "Cooling",
+      "Price": 19.99,
+      "Description": "High-quality thermostat for precise temperature regulation.",
+      "Stock": true,
+      "Quantity": 50,
+      "id": "0277"
+    },
+    {
+      "Name": "Power Steering Pump",
+      "Image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzX3qiCG1v2nnfIUbaxGfG4P3WJPvLn6CmeQ&s",
+      "Category": "Steering",
+      "Price": 99.95,
+      "Description": "Efficient power steering pump for smooth and responsive steering.",
+      "Stock": true,
+      "Quantity": 25,
+      "id": "18cb"
+    },
+    {
+      "Name": "Catalytic Converter",
+      "Image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfHTJLTEs5Vt4G3EoPaxctBUSUtV9d9AJ5zg&s",
+      "Category": "Exhaust System",
+      "Price": 299.95,
+      "Description": "High-efficiency catalytic converter for reduced emissions and optimal exhaust gas treatment.",
+      "Stock": true,
+      "Quantity": 15,
+      "id": "d76c"
+    },
+    {
+      "Name": "Wheel Hub Assembly",
+      "Image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMrKlV8Tv6tWlRCk0b2DQtBl_3m_-DpEIfJQ&s",
+      "Category": "Wheels & Tires",
+      "Price": 79.95,
+      "Description": "Durable wheel hub assembly for secure wheel mounting and smooth rotation.",
+      "Stock": true,
+      "Quantity": 35,
+      "id": "7208"
+    },
+    {
+      "Name": "Shock Mount",
+      "Image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmKaupQFM85IoV2jTEDwG_Trz06lRSC9MWhw&s",
+      "Category": "Suspension",
+      "Price": 14.99,
+      "Description": "Shock mount for secure attachment of shock absorbers and reduced vibration.",
+      "Stock": true,
+      "Quantity": 60,
+      "id": "7c34"
+    },
+    {
+      "Name": "Clutch Kit",
+      "Image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzwT3di7bC0W66iWeWv34v1tP2mKCqxz0zCA&s",
+      "Category": "Transmission",
+      "Price": 199.95,
+      "Description": "Complete clutch kit for smooth engagement and reliable power transfer.",
+      "Stock": true,
+      "Quantity": 20,
+      "id": "13d2"
+    },
+    {
+      "Name": "Axle Shaft",
+      "Image": "https://m.media-amazon.com/images/I/61Mn3j+GgnL._AC_UF894,1000_QL80_.jpg",
+      "Category": "Drivetrain",
+      "Price": 149.95,
+      "Description": "Heavy-duty axle shaft for durable performance and efficient power transmission.",
+      "Stock": true,
+      "Quantity": 25,
+      "id": "9638"
+    },
+    {
+      "Name": "Gasket Set",
+      "Image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpm7m2yyLGSfYrTQDwLKpLeLqdcFRAd73CNw&s",
+      "Category": "Engine",
+      "Price": 29.99,
+      "Description": "Comprehensive gasket set for sealing engine components and preventing leaks.",
+      "Stock": true,
+      "Quantity": 50,
+      "id": "e840"
+    },
+    {
+      "Name": "Brake Caliper",
+      "Image": "https://www.familyhandyman.com/wp-content/uploads/2020/03/Brake-Caliper-GettyImages-691429614.jpg",
+      "Category": "Brakes",
+      "Price": 79.95,
+      "Description": "Rebuilt brake caliper for reliable braking performance and durability.",
+      "Stock": true,
+      "Quantity": 30,
+      "id": "9299"
+    },
+    {
+      "Name": "Steering Wheel",
+      "Image": "https://m.media-amazon.com/images/I/61c715wlkUS._AC_UF1000,1000_QL80_.jpg",
+      "Category": "Interior",
+      "Price": 249.95,
+      "Description": "Sporty and ergonomic steering wheel for enhanced driving comfort and control.",
+      "Stock": true,
+      "Quantity": 15,
+      "id": "dc16"
+    },
+    {
+      "Name": "Muffler Hanger",
+      "Image": "https://m.media-amazon.com/images/I/61kAXWZeiDL._AC_UF1000,1000_QL80_.jpg",
+      "Category": "Exhaust System",
+      "Price": 9.99,
+      "Description": "Sturdy muffler hanger for secure mounting of exhaust system components.",
+      "Stock": true,
+      "Quantity": 40,
+      "id": "89f4"
+    },
+    {
+      "Name": "Fuel Tank",
+      "Image": "https://m.media-amazon.com/images/I/61s5QrTg0ZL._AC_UF1000,1000_QL80_.jpg",
+      "Category": "Fuel System",
+      "Price": 299.95,
+      "Description": "High-capacity fuel tank for extended driving range and fuel storage.",
+      "Stock": true,
+      "Quantity": 20,
+      "id": "b4c2"
+    },
+    {
+      "Name": "Tail Lights",
+      "Image": "https://cld.partsimg.com/image/upload/c_pad,dpr_auto,f_auto,w_1300,h_820/carparts/blog/landing-pages/replacement/taillights",
+      "Category": "Lighting",
+      "Price": 99.95,
+      "Description": "Stylish and durable tail lights for enhanced visibility and safety.",
+      "Stock": true,
+      "Quantity": 30,
+      "id": "3530"
+    },
+    {
+      "Name": "Radiator Hose",
+      "Image": "https://m.media-amazon.com/images/I/51rPHt2DKlL.jpg",
+      "Category": "Cooling",
+      "Price": 14.95,
+      "Description": "Flexible radiator hose for efficient coolant flow and engine cooling.",
+      "Stock": true,
+      "Quantity": 50,
+      "id": "6204"
+    },
+    {
+      "Name": "Drive Belt",
+      "Image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmPcRNEYcJwmak84yrSTH-Ivf3JeuotgOsfA&s",
+      "Category": "Engine",
+      "Price": 19.99,
+      "Description": "Durable drive belt for reliable power transmission and engine operation.",
+      "Stock": true,
+      "Quantity": 60,
+      "id": "57ef"
+    },
+    {
+      "Name": "Ball Joint",
+      "Image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyeQWe218nx4CMxJIqP-LwI2wzjrf92eKMvw&s",
+      "Category": "Suspension",
+      "Price": 29.95,
+      "Description": "Heavy-duty ball joint for smooth wheel articulation and suspension support.",
+      "Stock": true,
+      "Quantity": 35,
+      "id": "7153"
+    },
+    {
+      "Name": "Window Regulator",
+      "Image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvN-he03pEEMpu2lmZyysKbWc2mQfj_Q99LA&s",
+      "Category": "Interior",
+      "Price": 89.95,
+      "Description": "Efficient window regulator for smooth and reliable window operation.",
+      "Stock": true,
+      "Quantity": 25,
+      "id": "5b51"
+    },
+    {
+      "Name": "Exhaust Manifold",
+      "Image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCmxwJt6ARbvcE2Dk3JS3DeswL5e4ZYhEkPAHLMqRZkclE2UJs0WJVHDsXshpdBZpTM7A&usqp=CAU",
+      "Category": "Exhaust System",
+      "Price": 149.95,
+      "Description": "High-performance exhaust manifold for optimized exhaust gas flow.",
+      "Stock": true,
+      "Quantity": 20,
+      "id": "7216"
+    }
+  ],
+  "categories": [
+    {
+      "id": "ccf1",
+      "Name": "Electronics"
+    },
+    {
+      "id": "ccf2",
+      "Name": "Clothing"
+    },
+    {
+      "id": "ccf3",
+      "Name": "Home Appliances"
+    },
+    {
+      "id": "ccf4",
+      "Name": "Books"
+    },
+    {
+      "id": "ccf5",
+      "Name": "Furniture"
+    },
+    {
+      "id": "ccf6",
+      "Name": "Toys"
+    },
+    {
+      "id": "ccf7",
+      "Name": "Sports Equipment"
+    },
+    {
+      "id": "ccf8",
+      "Name": "Beauty Products"
+    },
+    {
+      "id": "ccf9",
+      "Name": "Automotive"
+    },
+    {
+      "id": "ccf10",
+      "Name": "Jewelry"
+    },
+    {
+      "id": "ccf11",
+      "Name": "Health"
+    },
+    {
+      "id": "ccf12",
+      "Name": "Grocery"
+    },
+    {
+      "id": "ccf13",
+      "Name": "Garden"
+    },
+    {
+      "id": "ccf14",
+      "Name": "Office Supplies"
+    },
+    {
+      "id": "ccf15",
+      "Name": "Pet Supplies"
+    },
+    {
+      "id": "ccf16",
+      "Name": "Music"
+    },
+    {
+      "id": "ccf17",
+      "Name": "Movies"
+    },
+    {
+      "id": "ccf18",
+      "Name": "Video Games"
+    },
+    {
+      "id": "ccf19",
+      "Name": "Tools"
+    }
+  ]
+}
